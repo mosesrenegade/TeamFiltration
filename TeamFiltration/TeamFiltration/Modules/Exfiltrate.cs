@@ -230,6 +230,14 @@ namespace TeamFiltration.Modules
                     Console.WriteLine("[!] Invalid path given, could not find specified Teams database, or the specified file is not a DB file!");
                 }
             }
+            else if (args.Contains("--prt-cookie"))
+            {
+                Console.WriteLine("[+] Exchanging PRT Cookie for tokens");
+
+                string prtCookie = args.GetValue("--prt-cookie");
+                var PrtHandler = new PRTHandler(_globalProperties);
+                PrtHandler.GetCookie(prtCookie);
+            }
             else
             {
                 //Query a list of valid logins for users

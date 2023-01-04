@@ -149,6 +149,7 @@ namespace TeamFiltration.Handlers
             
 
         }
+       
         public DatabaseHandler(GlobalArgumentsHandler globalProperties)
         {
             _globalPropertiesHandler = globalProperties;
